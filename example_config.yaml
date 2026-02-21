@@ -1,5 +1,5 @@
 scheduler:
-  timezone: "US/Pacific"
+  timezone: "America/Los_Angeles"
   send_day: "Thursday"
   send_time: "13:00"
 

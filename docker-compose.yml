@@ -1,0 +1,6 @@
+services:
+  daqreminder:
+    build: .
+    container_name: daqreminder
+    volumes:
+      - ./config.yaml:/daqreminder/config.yaml:ro
