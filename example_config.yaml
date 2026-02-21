@@ -1,0 +1,28 @@
+scheduler:
+  timezone: "US/Pacific"
+  send_day: "Thursday"
+  send_time: "13:00"
+
+  # start and end date for the ping
+  operation_range: ["2026-02-10", "2026-03-01"]
+
+  # message that you want the bot to send
+  message: hi
+
+  # add in spring break and any holiday breaks
+  # leave this empty if there are no breaks
+  # the date comparison is INCLUSIVE
+  # meaning if the range is 2026-02-16 to 2026-03-01
+  # both 2026-02-16 and 2026-03-01 are counted
+  # as breaks
+  break_ranges:
+    - ["2026-02-16", "2026-02-20"]
+    - ["2026-02-25", "2026-02-26"]
+
+webhook:
+  # discord webhook link. You can create a discord webhook link in the text channel settings
+  webhook_url: https://discord.com/api/webhooks/channelid/token
+  # name of the webhook
+  name: DA BOT
+  # raw link to an image (optional)
+  pfp_url:

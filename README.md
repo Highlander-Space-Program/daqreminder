@@ -1,0 +1,21 @@
+# daqreminder
+
+A bot that automatic pings daq members weekly for the daq meeting.
+
+## Features
+
+- No ping during break
+- Start and end time for pinging (quarter ends = meeting time might change)
+- Send custom discord webhook messages to ping members.
+
+## Run
+
+Make sure you have the [`uv`](https://docs.astral.sh/uv/getting-started/)
+command installed on your machine.
+
+- Copy and paste `config_example.yaml`
+- Rename the new `config_example.yaml` file to `config.yaml`
+- Change the `config.yaml` according to your needs.
+- `uv venv`
+- `uv sync`
+- `uv run daqreminder`
