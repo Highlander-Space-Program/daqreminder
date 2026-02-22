@@ -1,4 +1,5 @@
-FROM ghcr.io/astral-sh/uv:debian
+FROM ghcr.io/astral-sh/uv:alpine
+RUN apk add --no-cache tzdata
 RUN mkdir -p /daqreminder
 WORKDIR /daqreminder
 RUN uv venv
