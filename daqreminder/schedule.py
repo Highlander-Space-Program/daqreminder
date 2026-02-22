@@ -2,6 +2,7 @@ from datetime import datetime, date, time
 import calendar
 from typing import List, Tuple, Optional
 from dataclasses import dataclass
+from logger import logger
 
 
 @dataclass
@@ -88,15 +89,19 @@ class ScheduleConfig:
             now.time().hour != self.send_time.hour
             or now.time().minute != self.send_time.minute
         ):
-            print("not yet lol")
+            logger.info(
+                "Current hour and minute don't match the specified hour and minute. Message will not be sent."
+            )
             return False
 
         if not self.operation_range.contained(today):
-            print("not in oepration range")
+            logger.info(
+                "Current day is outside of the operation range. Message will not be sent."
+            )
             return False
 
         if self.is_in_break(today):
-            print("is break")
+            logger.info("Current day is within break period. Message will not be sent.")
             return False
 
         return True
