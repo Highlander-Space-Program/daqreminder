@@ -19,3 +19,11 @@ command installed on your machine.
 - `uv venv`
 - `uv sync`
 - `uv run daqreminder`
+
+## Environment variables
+
+These are used to configure the logger used internally for debugging purposes.
+There are two possible environment variables: `LOG_LEVEL` and `EXTRA_LOGGERS`.
+`LOG_LEVEL` can have values of `info`, `warning`, `debug`, `error`, and
+`trace`. `EXTRA_LOGGERS` are the library loggers that you want to see in
+STDOUT, they will all use the same log level specified by `LOG_LEVEL`.
