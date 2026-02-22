@@ -4,3 +4,5 @@ services:
     container_name: daqreminder
     volumes:
       - ./config.yaml:/daqreminder/config.yaml:ro
+    environments:
+      - LOG_LEVEL=info
