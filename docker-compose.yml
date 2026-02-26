@@ -3,7 +3,7 @@ services:
     build: .
     container_name: daqreminder
     volumes:
-      - ./config.yaml:/daqreminder/config.yaml:ro
+      - ./config.yml:/daqreminder/config.yml:ro
       - /etc/localtime:/etc/localtime
     environment:
       - LOG_LEVEL=info

@@ -16,8 +16,8 @@ async def weekly_job(config: ScheduleConfig, webhook: Webhook):
 
 
 async def main():
-    logger.debug("Reading config.yaml")
-    with open("config.yaml") as f:
+    logger.debug("Reading config.yml")
+    with open("config.yml") as f:
         string_config = yaml.safe_load(f)
 
     logger.debug("Setting up scheduler_config")

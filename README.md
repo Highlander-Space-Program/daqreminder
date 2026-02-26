@@ -13,9 +13,9 @@ A bot that automatic pings daq members weekly for the daq meeting.
 Make sure you have the [`uv`](https://docs.astral.sh/uv/getting-started/)
 command installed on your machine.
 
-- Copy and paste `config_example.yaml`
-- Rename the new `config_example.yaml` file to `config.yaml`
-- Change the `config.yaml` according to your needs.
+- Copy and paste `config-example.yml`
+- Rename the new `config-example.yml` file to `config.yml`
+- Change the `config.yml` according to your needs.
 - `uv venv`
 - `uv sync`
 - `uv run daqreminder`
