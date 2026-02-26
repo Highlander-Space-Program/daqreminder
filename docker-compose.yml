@@ -4,5 +4,6 @@ services:
     container_name: daqreminder
     volumes:
       - ./config.yaml:/daqreminder/config.yaml:ro
+      - /etc/localtime:/etc/localtime
     environment:
       - LOG_LEVEL=info

@@ -3,6 +3,7 @@ import calendar
 from typing import List, Tuple, Optional
 from dataclasses import dataclass
 from logger import logger
+from zoneinfo import ZoneInfo
 
 
 @dataclass
@@ -79,7 +80,7 @@ class ScheduleConfig:
         """
         Returns True if message should be sent at this datetime.
         """
-        now = now or datetime.now()
+        now = now or datetime.now(ZoneInfo(self.timezone))
         today = now.date()
 
         if now.weekday() != self.send_day:
